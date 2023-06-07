@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.net.ServerSocket;
+import java.net.Socket;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -15,6 +16,8 @@ public class Main {
         System.out.println("Server is running in port " + port);
 
         //clinet kenek request karoth accept karanna
-        serverSocket.accept();
+//        serverSocket.accept();
+        //client kenek gen ena rqst ek accept krl iwr wela e ena rq eka connection ek hdgen thawa scket ekkt dgnnw.(local socket ekt)
+        Socket localSocket = serverSocket.accept();
     }
 }
