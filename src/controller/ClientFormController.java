@@ -2,11 +2,13 @@ package controller;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -20,14 +22,18 @@ import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.Socket;
+import java.nio.charset.Charset;
+import java.util.Objects;
 
 public class ClientFormController extends Thread {
     public Label userName;
-    public TextField txtTyping1;
-    public Label txtTyping;
     public VBox vbox_messages;
+    public TextField txtTyping;
+    public Button btn_send;
     public AnchorPane EmojiPane;
-    public ImageView btn_send;
+    public Text txtClientName;
+    public TextField txtTyping1;
+
 
     BufferedReader reader;
     PrintWriter writer;
@@ -50,7 +56,8 @@ public class ClientFormController extends Thread {
             e.printStackTrace();
         }
     }
-    //    public void initialize() throws IOException {
+
+//    public void initialize() throws IOException {
 //        String userName = LoginFormController.name;
 //        this.userName.setText(userName);
 //        try {
@@ -184,7 +191,7 @@ public class ClientFormController extends Thread {
                         hBox.getChildren().add(flow2);
                         hBox.setPadding(new Insets(2,5,2,10));
 
-                        flow2.setStyle("-fx-color: rgb(239,242,255);" +
+                       flow2.setStyle("-fx-color: rgb(239,242,255);" +
                                 "-fx-background-color: rgb(191,241,9);" +
                                 "-fx-background-radius: 10px");
                         flow2.setPadding(new Insets(3,10,3,10));
@@ -201,7 +208,7 @@ public class ClientFormController extends Thread {
     }
 
 
-    //    @Override
+//    @Override
 //    public void run() {
 //        try {
 //            while (true) {
@@ -245,6 +252,52 @@ public class ClientFormController extends Thread {
 //            e.printStackTrace();
 //        }
 //    }
+
+    public void sendmsgOnAction(ActionEvent actionEvent) {
+            String msg = txtTyping.getText();
+            writer.println(txtClientName.getText() + ": " + msg);
+            System.out.println("send Method======= " + txtClientName.getText() + ": " + msg);
+            txtTyping.clear();
+            if (msg.equalsIgnoreCase("exit")) {
+                System.exit(0);
+            }
+        }
+
+//    public void sendmsgOnAction(ActionEvent actionEvent) {
+//        String msg = txtTyping.getText();
+//        writer.println(userName.getText() + ": " + msg);
+//        txtTyping.clear();
+//
+//        if (msg.equalsIgnoreCase("!Bye") || (msg.equalsIgnoreCase("logout"))) {
+//            // Send a leave message to the server before exiting
+//            writer.println(userName.getText() + " has left the group chat");
+//            System.exit(0);
+//        }
+//    }
+
+    public void ImageMouseClicked(MouseEvent mouseEvent) {
+        Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Image");
+        this.filePath = fileChooser.showOpenDialog(stage);
+        writer.println(userName.getText() + " " + "img" + filePath.getPath());
+    }
+
+    public void entersend(ActionEvent actionEvent) {
+        btn_send.fire();
+    }
+
+    public void EmojiOnAction(MouseEvent mouseEvent) throws IOException {
+            EmojiPane.setVisible(true);
+//        byte[] emojiByteCode = new byte[]{(byte) 0xF0, (byte) 0x9F, (byte) 0x98, (byte) 0x81};
+//        String emoji = new String(emojiByteCode,Charset.forName("UTF-8"));
+//        txtTyping.appendText("\uD83D\uDE00");
+////      txtTyping.appendText("\uD83A");
+//        txtTyping.appendText("\uD83D\uDE34");
+//        txtTyping.setText(txtTyping.getText()+" "+emoji);
+
+    }
+
     public void Heart(MouseEvent mouseEvent) {
         String emoji = new String(Character.toChars(128525));
         txtTyping.setText(emoji);
@@ -311,14 +364,14 @@ public class ClientFormController extends Thread {
         EmojiPane.setVisible(false);
     }
 
-    public void satisfied(MouseEvent mouseEvent) {
-        String emoji = new String(Character.toChars(128519));
+    public void money(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(129297));
         txtTyping.setText(emoji);
         EmojiPane.setVisible(false);
     }
 
-    public void money(MouseEvent mouseEvent) {
-        String emoji = new String(Character.toChars(129297));
+    public void satisfied(MouseEvent mouseEvent) {
+        String emoji = new String(Character.toChars(128519));
         txtTyping.setText(emoji);
         EmojiPane.setVisible(false);
     }
@@ -334,43 +387,6 @@ public class ClientFormController extends Thread {
         txtTyping.setText(emoji);
         EmojiPane.setVisible(false);
     }
-
-    public void entersend(ActionEvent actionEvent) {
-//        btn_send.fire();
-    }
-
-    public void ImageMouseClicked(MouseEvent mouseEvent) {
-        Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-        fileChooser = new FileChooser();
-        fileChooser.setTitle("Open Image");
-        this.filePath = fileChooser.showOpenDialog(stage);
-        writer.println(userName.getText() + " " + "img" + filePath.getPath());
-    }
-
-    public void EmojiOnAction(MouseEvent mouseEvent) {
-        EmojiPane.setVisible(true);
-    }
-
-    public void sendmsgOnAction(MouseEvent mouseEvent) {
-        String msg = txtTyping1.getText();
-        writer.println(userName.getText() + ": " + msg);
-        txtTyping1.clear();
-
-        if(msg.equalsIgnoreCase("!Bye") || (msg.equalsIgnoreCase("logout"))) {
-            System.exit(0);
-
-        }
-    }
-
-//    public void sendmsgOnAction(ActionEvent actionEvent) {
-//        String msg = txtTyping.getText();
-//        writer.println(userName.getText() + ": " + msg);
-//        txtTyping.clear();
-//
-//        if (msg.equalsIgnoreCase("!Bye") || (msg.equalsIgnoreCase("logout"))) {
-//            // Send a leave message to the server before exiting
-//            writer.println(userName.getText() + " has left the group chat");
-//            System.exit(0);
-//        }
-//    }
 }
+
+

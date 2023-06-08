@@ -15,6 +15,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
 <AnchorPane prefHeight="595.0" prefWidth="395.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientFormController">
@@ -30,7 +31,7 @@
             <Image url="@../assests/User.png" />
          </image>
       </ImageView>
-      <Label layoutX="54.0" layoutY="38.0" text="Active now" textFill="WHITE">
+      <Label layoutX="61.0" layoutY="36.0" text="Active now" textFill="WHITE">
          <font>
             <Font name="System Italic" size="12.0" />
          </font>
@@ -199,7 +200,7 @@
          </children>
       </AnchorPane>
       <Circle fill="DODGERBLUE" layoutX="53.0" layoutY="37.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
-      <Label fx:id="txtTyping" layoutX="13.0" layoutY="553.0" prefHeight="34.0" prefWidth="372.0" style="-fx-background-color: #413F42; -fx-background-radius: 30;" />
+      <Label layoutX="13.0" layoutY="553.0" prefHeight="34.0" prefWidth="372.0" style="-fx-background-color: #413F42; -fx-background-radius: 30;" />
       <TextField fx:id="txtTyping1" layoutX="27.0" layoutY="555.0" onAction="#entersend" prefHeight="30.0" prefWidth="230.0" promptText="Message..." style="-fx-background-color: #413F42;-fx-text-fill: white; -fx-font-weight: bold;">
          <font>
             <Font size="14.0" />
@@ -207,7 +208,7 @@
       </TextField>
       <ImageView disable="true" fitHeight="30.0" fitWidth="30.0" layoutX="257.0" layoutY="554.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../Desktop/ChatApplication_NP/src/lk/ijse/chatApp/view/images/mic.png" />
+            <Image url="@../assests/mic.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="287.0" layoutY="553.0" onMouseClicked="#ImageMouseClicked" pickOnBounds="true" preserveRatio="true">
@@ -220,7 +221,7 @@
             <Image url="@../assests/emoji.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="btn_send" fitHeight="30.0" fitWidth="30.0" layoutX="351.0" layoutY="554.0" onMouseClicked="#sendmsgOnAction" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="351.0" layoutY="554.0" onMouseClicked="#sendmsgOnAction" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assests/send.png" />
          </image>
@@ -230,5 +231,10 @@
             <Image url="@../assests/vcamera.png" />
          </image>
       </ImageView>
+      <Text fx:id="txtClientName" fill="WHITE" layoutX="65.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nethu" wrappingWidth="214.00000185146928">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
