@@ -171,7 +171,7 @@ public class ClientFormController extends Thread {
                         hBox.setPadding(new Insets(2,5,2,10));
 
                        flow2.setStyle("-fx-color: rgb(239,242,255);" +
-                                "-fx-background-color: rgb(191,241,9);" +
+                                "-fx-background-color: rgb(164,55,201);" +
                                 "-fx-background-radius: 10px");
                         flow2.setPadding(new Insets(3,10,3,10));
 
