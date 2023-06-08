@@ -29,12 +29,12 @@ public class LoginFormController {
 
         name = txtUserName.getText();
 
-        Parent root = FXMLLoader.load(getClass().getResource("/view/ClientForm.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/View/ClientForm.fxml"));
         Stage stage = new Stage();
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("Chat with Play Tech");
-//        stage.getIcons().add(new Image("Assets/Images/AppIcon.png"));
+        stage.getIcons().add(new Image("Assets/Images/AppIcon.png"));
         stage.centerOnScreen();
         stage.setResizable(false);
         stage.show();

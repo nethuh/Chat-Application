@@ -31,8 +31,6 @@ public class ClientFormController extends Thread {
     public TextField txtTyping;
     public Button btn_send;
     public AnchorPane EmojiPane;
-    public Text txtClientName;
-    public TextField txtTyping1;
 
 
     BufferedReader reader;
@@ -56,25 +54,6 @@ public class ClientFormController extends Thread {
             e.printStackTrace();
         }
     }
-
-//    public void initialize() throws IOException {
-//        String userName = LoginFormController.name;
-//        this.userName.setText(userName);
-//        try {
-//            socket = new Socket("localhost", 6000);
-//            System.out.println("Socket is connected with server!");
-//            reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-//            writer = new PrintWriter(socket.getOutputStream(), true);
-//
-//            // Send a join message to the server to indicate that this user has joined the group chat
-//            writer.println(userName + " has joined the group chat");
-//
-//            this.start();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
 
     @Override
     public void run() {
@@ -207,73 +186,16 @@ public class ClientFormController extends Thread {
         }
     }
 
-
-//    @Override
-//    public void run() {
-//        try {
-//            while (true) {
-//                String msg = reader.readLine();
-//                String[] tokens = msg.split(" ");
-//                String cmd = tokens[0];
-//
-//                StringBuilder fullMsg = new StringBuilder();
-//                for (int i = 1; i < tokens.length; i++) {
-//                    fullMsg.append(tokens[i]).append(" ");
-//                }
-//
-//                // Process the group chat message
-//                Text text = new Text(fullMsg.toString());
-//                String sender = cmd.substring(0, cmd.length() - 1); // Extract the sender's name
-//
-//                TextFlow tempFlow = new TextFlow();
-//                Text txtName = new Text(sender + ": ");
-//                txtName.getStyleClass().add("txtName");
-//                tempFlow.getChildren().add(txtName);
-//
-//                tempFlow.setStyle("-fx-color: rgb(239,242,255);" +
-//                        "-fx-background-color: rgb(15,125,242);" +
-//                        " -fx-background-radius: 10px");
-//                tempFlow.setPadding(new Insets(3, 10, 3, 10));
-//
-//                tempFlow.getChildren().add(text);
-//                tempFlow.setMaxWidth(200);
-//
-//                TextFlow flow = new TextFlow(tempFlow);
-//
-//                HBox hBox = new HBox(12);
-//                vbox_messages.setAlignment(Pos.TOP_LEFT);
-//                hBox.setAlignment(Pos.CENTER_LEFT);
-//                hBox.getChildren().add(flow);
-//                hBox.setPadding(new Insets(2, 5, 2, 10));
-//
-//                Platform.runLater(() -> vbox_messages.getChildren().addAll(hBox));
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
-
     public void sendmsgOnAction(ActionEvent actionEvent) {
-            String msg = txtTyping.getText();
-            writer.println(txtClientName.getText() + ": " + msg);
-            System.out.println("send Method======= " + txtClientName.getText() + ": " + msg);
-            txtTyping.clear();
-            if (msg.equalsIgnoreCase("exit")) {
-                System.exit(0);
-            }
-        }
+        String msg = txtTyping.getText();
+        writer.println(userName.getText() + ": " + msg);
+        txtTyping.clear();
 
-//    public void sendmsgOnAction(ActionEvent actionEvent) {
-//        String msg = txtTyping.getText();
-//        writer.println(userName.getText() + ": " + msg);
-//        txtTyping.clear();
-//
-//        if (msg.equalsIgnoreCase("!Bye") || (msg.equalsIgnoreCase("logout"))) {
-//            // Send a leave message to the server before exiting
-//            writer.println(userName.getText() + " has left the group chat");
-//            System.exit(0);
-//        }
-//    }
+        if(msg.equalsIgnoreCase("!Bye") || (msg.equalsIgnoreCase("logout"))) {
+            System.exit(0);
+
+        }
+    }
 
     public void ImageMouseClicked(MouseEvent mouseEvent) {
         Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
