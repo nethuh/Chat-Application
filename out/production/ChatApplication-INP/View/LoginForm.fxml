@@ -7,30 +7,54 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="350.0" style="-fx-background-color: linear-gradient(to right, #F96AC1, #231F20, #1C4C7C);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+<AnchorPane prefHeight="400.0" prefWidth="350.0" style="-fx-background-color: #010101;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
    <children>
-      <ImageView fitHeight="101.0" fitWidth="121.0" layoutX="128.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="438.0" fitWidth="350.0">
          <image>
-            <Image url="@../Assets/Images/UserIcon2.png" />
+            <Image url="@../Assets/dark-aesthetic-cartoon-2lqmjfxp8crpxg91.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="133.0" layoutY="46.0" text="User Login" textFill="WHITE">
+      <Label layoutX="127.0" layoutY="98.0" text="User Login">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="System Bold" size="19.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="0.6439393722649777" endY="0.0833333191094976" startX="0.6174242677110615" startY="0.7310605771613844">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.1211305518169583">
+                     <color>
+                        <Color red="0.2969200909137726" green="0.6040909886360168" blue="0.7157894968986511" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.21119999885559082" green="0.5338883399963379" blue="0.6399999856948853" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <TextField fx:id="txtUserName" layoutX="99.0" layoutY="238.0" onAction="#enterOnAction" prefHeight="25.0" prefWidth="159.0" promptText="Enter Your Name">
+      <TextField fx:id="txtUserName" layoutX="94.0" layoutY="194.0" onAction="#enterOnAction" prefHeight="35.0" prefWidth="174.0" promptText="Enter Your Name" style="-fx-background-radius: 10;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor></TextField>
-      <Button fx:id="btnLogin" layoutX="139.0" layoutY="280.0" mnemonicParsing="false" onAction="#clickOnAction" prefHeight="16.0" prefWidth="78.0" style="-fx-background-color: linear-gradient(to right, #0f2027, #203a43, #2c5364);;" text="Login" textFill="WHITE">
+      <Button fx:id="btnLogin" layoutX="133.0" layoutY="247.0" mnemonicParsing="false" onAction="#clickOnAction" prefHeight="27.0" prefWidth="102.0" style="-fx-background-color: linear-gradient(to right, #44D7FD, #011220, #C65DFF); -fx-background-radius: 10;" text="Login" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
          <font>
-            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+            <Font name="Berlin Sans FB Demi Bold" size="14.0" />
          </font>
       </Button>
    </children>

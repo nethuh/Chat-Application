@@ -27,7 +27,7 @@
          <children>
             <ImageView fitHeight="34.0" fitWidth="51.0" onMouseClicked="#clickOnSend" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Assets/Images/emojiF/1.png" />
+                  <Image url="@../Assets/emoji/1.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -35,7 +35,7 @@
             </ImageView>
             <ImageView fitHeight="34.0" fitWidth="51.0" onMouseClicked="#clickOnSend" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
                <image>
-                  <Image url="@../Assets/Images/emojiF/2.png" />
+                  <Image url="@../Assets/emoji/2.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -43,7 +43,7 @@
             </ImageView>
             <ImageView fitHeight="34.0" fitWidth="51.0" onMouseClicked="#clickOnSend" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
                <image>
-                  <Image url="@../Assets/Images/emojiF/3.png" />
+                  <Image url="@../Assets/emoji/3.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -51,7 +51,7 @@
             </ImageView>
             <ImageView fitHeight="34.0" fitWidth="51.0" onMouseClicked="#clickOnSend" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                <image>
-                  <Image url="@../Assets/Images/emojiF/4.png" />
+                  <Image url="@../Assets/emoji/4.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -59,7 +59,7 @@
             </ImageView>
             <ImageView fitHeight="34.0" fitWidth="53.0" onMouseClicked="#clickOnSend" pickOnBounds="true" preserveRatio="true" smooth="false" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <image>
-                  <Image url="@../Assets/Images/emojiF/7.png" />
+                  <Image url="@../Assets/emoji/7.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -67,7 +67,7 @@
             </ImageView>
             <ImageView fitHeight="34.0" fitWidth="51.0" onMouseClicked="#clickOnSend" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <image>
-                  <Image url="@../Assets/Images/emojiF/6.png" />
+                  <Image url="@../Assets/emoji/6.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -75,7 +75,7 @@
             </ImageView>
             <ImageView fitHeight="34.0" fitWidth="51.0" onMouseClicked="#clickOnSend" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
                <image>
-                  <Image url="@../Assets/Images/emojiF/8.png" />
+                  <Image url="@../Assets/emoji/8.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -83,7 +83,7 @@
             </ImageView>
             <ImageView fitHeight="34.0" fitWidth="51.0" onMouseClicked="#clickOnSend" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <image>
-                  <Image url="@../Assets/Images/emojiF/9.png" />
+                  <Image url="@../Assets/emoji/9.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -91,7 +91,7 @@
             </ImageView>
             <ImageView fitHeight="34.0" fitWidth="51.0" onMouseClicked="#clickOnSend" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <image>
-                  <Image url="@../Assets/Images/emojiF/11.png" />
+                  <Image url="@../Assets/emoji/11.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -99,7 +99,7 @@
             </ImageView>
             <ImageView fitHeight="34.0" fitWidth="51.0" onMouseClicked="#clickOnSend" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
                <image>
-                  <Image url="@../Assets/Images/emojiF/15.png" />
+                  <Image url="@../Assets/emoji/15.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -107,7 +107,7 @@
             </ImageView>
             <ImageView fitHeight="34.0" fitWidth="51.0" onMouseClicked="#clickOnSend" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <image>
-                  <Image url="@../Assets/Images/emojiF/12.png" />
+                  <Image url="@../Assets/emoji/12.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -115,7 +115,7 @@
             </ImageView>
             <ImageView fitHeight="34.0" fitWidth="51.0" onMouseClicked="#clickOnSend" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <image>
-                  <Image url="@../Assets/Images/emojiF/13.png" />
+                  <Image url="@../Assets/emoji/13.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -123,7 +123,7 @@
             </ImageView>
             <ImageView fitHeight="34.0" fitWidth="51.0" onMouseClicked="#clickOnSend" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
                <image>
-                  <Image url="@../Assets/Images/emojiF/14.png" />
+                  <Image url="@../Assets/emoji/14.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -131,7 +131,7 @@
             </ImageView>
             <ImageView fitHeight="34.0" fitWidth="51.0" onMouseClicked="#clickOnSend" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <image>
-                  <Image url="@../Assets/Images/emojiF/5.png" />
+                  <Image url="@../Assets/emoji/5.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -139,7 +139,7 @@
             </ImageView>
             <ImageView fitHeight="34.0" fitWidth="51.0" onMouseClicked="#clickOnSend" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <image>
-                  <Image url="@../Assets/Images/emojiF/10.png" />
+                  <Image url="@../Assets/emoji/10.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
